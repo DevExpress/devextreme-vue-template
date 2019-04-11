@@ -27,7 +27,11 @@
             ></path>
           </svg>
 
-          <svg class="vue-logo" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="vue-logo"
+            viewBox="0 0 180 62"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <polygon
               style="fill:#41B782;"
               points="44.3,0 36,14.3 27.7,0 0,0 36,62 72,0 "
