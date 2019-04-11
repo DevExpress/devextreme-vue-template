@@ -1,6 +1,6 @@
 <template>
   <div class="side-navigation-menu" @click="forwardClick">
-    <slot/>
+    <slot />
     <div class="menu-container">
       <dx-tree-view
         expand-event="click"
@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import DxTreeView from 'devextreme-vue/ui/tree-view'
+import DxTreeView from "devextreme-vue/ui/tree-view";
 
-const treeViewRef = 'treeViewRef'
+const treeViewRef = "treeViewRef";
 
 export default {
   props: {
@@ -30,79 +30,79 @@ export default {
     selectedItem: String,
     compactMode: Boolean
   },
-  data () {
+  data() {
     return {
       treeViewRef
-    }
+    };
   },
   methods: {
-    forwardClick (...args) {
-      this.$emit('click', args)
+    forwardClick(...args) {
+      this.$emit("click", args);
     },
 
-    handleMenuInitialized (event) {
-      event.component.option('deferRendering', false)
+    handleMenuInitialized(event) {
+      event.component.option("deferRendering", false);
     },
 
-    handleItemClick (e) {
+    handleItemClick(e) {
       if (!e.itemData.path) {
-        return
+        return;
       }
 
-      this.$router.push(e.itemData.path)
+      this.$router.push(e.itemData.path);
 
-      const pointerEvent = e.event
-      pointerEvent.stopPropagation()
+      const pointerEvent = e.event;
+      pointerEvent.stopPropagation();
     },
 
-    handleSelectionChange (e) {
-      this.updateSelection()
-      const nodeClass = 'dx-treeview-node'
-      const selectedClass = 'dx-state-selected'
-      const leafNodeClass = 'dx-treeview-node-is-leaf'
-      const element = e.element
+    handleSelectionChange(e) {
+      this.updateSelection();
+      const nodeClass = "dx-treeview-node";
+      const selectedClass = "dx-state-selected";
+      const leafNodeClass = "dx-treeview-node-is-leaf";
+      const element = e.element;
 
       const rootNodes = element.querySelectorAll(
         `.${nodeClass}:not(.${leafNodeClass})`
-      )
+      );
       Array.from(rootNodes).forEach(node => {
-        node.classList.remove(selectedClass)
-      })
+        node.classList.remove(selectedClass);
+      });
 
       let selectedNode = element.querySelector(
         `.${nodeClass}.${selectedClass}`
-      )
+      );
 
       while (selectedNode && selectedNode.parentElement) {
         if (selectedNode.classList.contains(nodeClass)) {
-          selectedNode.classList.add(selectedClass)
+          selectedNode.classList.add(selectedClass);
         }
-        selectedNode = selectedNode.parentElement
+        selectedNode = selectedNode.parentElement;
       }
     },
 
-    updateSelection () {
-      this.treeView.selectItem(this.$route.path)
+    updateSelection() {
+      this.treeView.selectItem(this.$route.path);
     }
   },
-  mounted () {
-    this.treeView = this.$refs[treeViewRef] && this.$refs[treeViewRef].instance
-    this.updateSelection()
+  mounted() {
+    this.treeView = this.$refs[treeViewRef] && this.$refs[treeViewRef].instance;
+    this.updateSelection();
   },
   watch: {
-    $route () {
-      this.updateSelection()
+    $route() {
+      this.updateSelection();
     },
-    compactMode () {
+    compactMode() {
       if (this.compactMode) {
-        this.treeView.collapseAll()
+        this.treeView.collapseAll();
       }
     }
   },
   components: {
     DxTreeView
   }
-}
+};
 </script>
 
 <style lang="scss">

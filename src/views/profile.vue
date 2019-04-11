@@ -4,9 +4,9 @@
 
     <div class="content-block dx-card responsive-paddings">
       <div class="form-avatar">
-        <img :src="imageSrc">
+        <img :src="imageSrc" />
       </div>
-      <span>{{formData.Notes}}</span>
+      <span>{{ formData.Notes }}</span>
     </div>
 
     <div class="content-block dx-card responsive-paddings">
@@ -22,36 +22,38 @@
 </template>
 
 <script>
-import DxForm from 'devextreme-vue/form'
+import DxForm from "devextreme-vue/form";
 
 export default {
   props: {
     picture: String
   },
-  data () {
-    const picture = 'images/employees/06.png'
+  data() {
+    const picture = "images/employees/06.png";
     return {
       imageSrc: `https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/${picture}`,
       formData: {
         ID: 7,
-        FirstName: 'Sandra',
-        LastName: 'Johnson',
-        Prefix: 'Mrs.',
-        Position: 'Controller',
+        FirstName: "Sandra",
+        LastName: "Johnson",
+        Prefix: "Mrs.",
+        Position: "Controller",
         Picture: picture,
-        BirthDate: new Date('1974/11/15'),
-        HireDate: new Date('2005/05/11'),
-        Notes: 'Sandra is a CPA and has been our controller since 2008.' +
-          'She loves to interact with staff so if yo`ve not met her, be certain to say hi.' + '\r\n\r\n' +
-          'Sandra has 2 daughters both of whom are accomplished gymnasts.',
-        Address: '4600 N Virginia Rd.'
+        BirthDate: new Date("1974/11/15"),
+        HireDate: new Date("2005/05/11"),
+        Notes:
+          "Sandra is a CPA and has been our controller since 2008." +
+          "She loves to interact with staff so if yo`ve not met her, be certain to say hi." +
+          "\r\n\r\n" +
+          "Sandra has 2 daughters both of whom are accomplished gymnasts.",
+        Address: "4600 N Virginia Rd."
       }
-    }
+    };
   },
   components: {
     DxForm
   }
-}
+};
 </script>
 
 <style lang="scss">

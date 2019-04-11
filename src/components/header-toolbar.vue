@@ -1,15 +1,32 @@
 <template>
   <header class="header-component">
     <dx-toolbar class="header-toolbar">
-      <dx-item :visible="menuToggleEnabled" location="before" css-class="menu-button">
-        <dx-button icon="menu" styling-mode="text" @click="toggleMenuFunc" slot-scope="_"/>
+      <dx-item
+        :visible="menuToggleEnabled"
+        location="before"
+        css-class="menu-button"
+      >
+        <dx-button
+          icon="menu"
+          styling-mode="text"
+          @click="toggleMenuFunc"
+          slot-scope="_"
+        />
       </dx-item>
 
-      <dx-item v-if="title" location="before" css-class="header-title dx-toolbar-label">
-        <div slot-scope="_">{{title}}</div>
+      <dx-item
+        v-if="title"
+        location="before"
+        css-class="header-title dx-toolbar-label"
+      >
+        <div slot-scope="_">{{ title }}</div>
       </dx-item>
 
-      <dx-item location="after" locate-in-menu="auto" menu-item-template="menuUserItem">
+      <dx-item
+        location="after"
+        locate-in-menu="auto"
+        menu-item-template="menuUserItem"
+      >
         <div slot-scope="_">
           <dx-button
             class="user-button authorization"
@@ -17,21 +34,26 @@
             height="100%"
             styling-mode="text"
           >
-            <user-panel :menu-items="userMenuItems" menu-mode="context"/>
+            <user-panel :menu-items="userMenuItems" menu-mode="context" />
           </dx-button>
         </div>
       </dx-item>
-      <user-panel :menu-items="userMenuItems" menu-mode="list" slot-scope="_" slot="menuUserItem"/>
+      <user-panel
+        :menu-items="userMenuItems"
+        menu-mode="list"
+        slot-scope="_"
+        slot="menuUserItem"
+      />
     </dx-toolbar>
   </header>
 </template>
 
 <script>
-import DxButton from 'devextreme-vue/button'
-import DxToolbar, { DxItem } from 'devextreme-vue/toolbar'
-import auth from '../auth'
+import DxButton from "devextreme-vue/button";
+import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
+import auth from "../auth";
 
-import UserPanel from './user-panel'
+import UserPanel from "./user-panel";
 
 export default {
   props: {
@@ -40,27 +62,27 @@ export default {
     toggleMenuFunc: Function,
     logOutFunc: Function
   },
-  data () {
+  data() {
     return {
       userMenuItems: [
         {
-          text: 'Profile',
-          icon: 'user'
+          text: "Profile",
+          icon: "user"
         },
         {
-          text: 'Logout',
-          icon: 'runner',
+          text: "Logout",
+          icon: "runner",
           onClick: this.onLogoutClick
         }
       ]
-    }
+    };
   },
   methods: {
-    onLogoutClick () {
-      auth.logOut()
+    onLogoutClick() {
+      auth.logOut();
       this.$router.push({
-        path: '/login-form'
-      })
+        path: "/login-form"
+      });
     }
   },
   components: {
@@ -69,7 +91,7 @@ export default {
     DxItem,
     UserPanel
   }
-}
+};
 </script>
 
 <style lang="scss">

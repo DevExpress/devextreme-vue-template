@@ -17,8 +17,8 @@
           :toggle-menu-func="toggleMenu"
         />
         <dx-scroll-view class="layout-body with-footer">
-          <slot/>
-          <slot name="footer"/>
+          <slot />
+          <slot name="footer" />
         </dx-scroll-view>
       </div>
       <side-nav-menu
@@ -31,11 +31,16 @@
       >
         <dx-toolbar id="navigation-header">
           <dx-item location="before" css-class="menu-button">
-            <dx-button icon="menu" styling-mode="text" @click="toggleMenu" slot-scope="_"/>
+            <dx-button
+              icon="menu"
+              styling-mode="text"
+              @click="toggleMenu"
+              slot-scope="_"
+            />
           </dx-item>
           <dx-item location="before" css-class="header-title dx-toolbar-label">
             <div slot-scope="_">
-              <div>{{title}}</div>
+              <div>{{ title }}</div>
             </div>
           </dx-item>
         </dx-toolbar>
@@ -45,14 +50,14 @@
 </template>
 
 <script>
-import DxButton from 'devextreme-vue/button'
-import DxDrawer from 'devextreme-vue/drawer'
-import DxScrollView from 'devextreme-vue/scroll-view'
-import DxToolbar, { DxItem } from 'devextreme-vue/toolbar'
+import DxButton from "devextreme-vue/button";
+import DxDrawer from "devextreme-vue/drawer";
+import DxScrollView from "devextreme-vue/scroll-view";
+import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
 
-import HeaderToolbar from '../components/header-toolbar'
-import SideNavMenu from '../components/side-nav-menu'
-import menuItems from '../app-navigation'
+import HeaderToolbar from "../components/header-toolbar";
+import SideNavMenu from "../components/side-nav-menu";
+import menuItems from "../app-navigation";
 
 export default {
   props: {
@@ -61,49 +66,49 @@ export default {
     isLarge: Boolean
   },
   methods: {
-    toggleMenu (e) {
-      const pointerEvent = e.event
-      pointerEvent.stopPropagation()
+    toggleMenu(e) {
+      const pointerEvent = e.event;
+      pointerEvent.stopPropagation();
       if (this.menuOpened) {
-        this.menuTemporaryOpened = false
+        this.menuTemporaryOpened = false;
       }
-      this.menuOpened = !this.menuOpened
+      this.menuOpened = !this.menuOpened;
     },
-    handleSideBarClick () {
-      if (this.menuOpened === false) this.menuTemporaryOpened = true
-      this.menuOpened = true
+    handleSideBarClick() {
+      if (this.menuOpened === false) this.menuTemporaryOpened = true;
+      this.menuOpened = true;
     }
   },
-  data () {
+  data() {
     return {
       menuOpened: this.isLarge,
       menuTemporaryOpened: false,
       menuItems
-    }
+    };
   },
   computed: {
-    drawerOptions () {
-      const shaderEnabled = !this.isLarge
+    drawerOptions() {
+      const shaderEnabled = !this.isLarge;
       return {
-        menuMode: this.isLarge ? 'shrink' : 'overlap',
-        menuRevealMode: this.isXSmall ? 'slide' : 'expand',
+        menuMode: this.isLarge ? "shrink" : "overlap",
+        menuRevealMode: this.isXSmall ? "slide" : "expand",
         minMenuSize: this.isXSmall ? 0 : 60,
         menuOpened: this.isLarge,
         closeOnOutsideClick: shaderEnabled,
         shaderEnabled
-      }
+      };
     },
-    headerMenuTogglerEnabled () {
-      return this.isXSmall
+    headerMenuTogglerEnabled() {
+      return this.isXSmall;
     }
   },
   watch: {
-    isLarge () {
-      this.menuOpened = this.isLarge
+    isLarge() {
+      this.menuOpened = this.isLarge;
     },
-    $route () {
+    $route() {
       if (this.menuTemporaryOpened) {
-        this.menuOpened = false
+        this.menuOpened = false;
       }
     }
   },
@@ -116,7 +121,7 @@ export default {
     HeaderToolbar,
     SideNavMenu
   }
-}
+};
 </script>
 
 <style lang="scss">

@@ -1,13 +1,12 @@
-let authenticated = true
+let authenticated = true;
 export default {
-
-  athenticated () {
-    return authenticated
+  athenticated() {
+    return authenticated;
   },
-  logIn () {
-    authenticated = true
+  logIn() {
+    authenticated = true;
   },
-  logOut () {
-    authenticated = false
+  logOut() {
+    authenticated = false;
   }
-}
+};

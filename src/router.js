@@ -1,22 +1,22 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-import auth from './auth'
+import auth from "./auth";
 
-import Home from './views/home'
-import Profile from './views/profile'
-import DisplayData from './views/display-data'
-import simpleLayout from './layouts/single-card'
+import Home from "./views/home";
+import Profile from "./views/profile";
+import DisplayData from "./views/display-data";
+import simpleLayout from "./layouts/single-card";
 // import defaultLayout from './layouts/side-nav-inner-toolbar'
-import defaultLayout from './layouts/side-nav-outer-toolbar'
+import defaultLayout from "./layouts/side-nav-outer-toolbar";
 
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
   routes: [
     {
-      path: '/home',
-      name: 'home',
+      path: "/home",
+      name: "home",
       meta: { requiresAuth: true },
       components: {
         layout: defaultLayout,
@@ -24,8 +24,8 @@ const router = new Router({
       }
     },
     {
-      path: '/profile',
-      name: 'profile',
+      path: "/profile",
+      name: "profile",
       meta: { requiresAuth: true },
       components: {
         layout: defaultLayout,
@@ -33,8 +33,8 @@ const router = new Router({
       }
     },
     {
-      path: '/display-data',
-      name: 'display-data',
+      path: "/display-data",
+      name: "display-data",
       meta: { requiresAuth: true },
       components: {
         layout: defaultLayout,
@@ -42,45 +42,46 @@ const router = new Router({
       }
     },
     {
-      path: '/login-form',
-      name: 'login-form',
+      path: "/login-form",
+      name: "login-form",
       meta: { requiresAuth: false },
       components: {
         layout: simpleLayout,
         // route level code-splitting
         // this generates a separate chunk (login.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        content: () => import(/* webpackChunkName: "login" */ './views/login-form')
+        content: () =>
+          import(/* webpackChunkName: "login" */ "./views/login-form")
       }
     },
     {
-      path: '/',
-      redirect: '/home'
+      path: "/",
+      redirect: "/home"
     },
     {
-      path: '/recovery',
-      redirect: '/home'
+      path: "/recovery",
+      redirect: "/home"
     },
     {
-      path: '*',
-      redirect: '/home'
+      path: "*",
+      redirect: "/home"
     }
   ]
-})
+});
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (!auth.athenticated()) {
       next({
-        path: '/login-form',
+        path: "/login-form",
         query: { redirect: to.fullPath }
-      })
+      });
     } else {
-      next()
+      next();
     }
   } else {
-    next()
+    next();
   }
-})
+});
 
-export default router
+export default router;

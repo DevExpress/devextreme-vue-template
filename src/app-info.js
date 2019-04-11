@@ -1,3 +1,3 @@
 export default {
-  title: 'DevExtreme App'
-}
+  title: "DevExtreme App"
+};

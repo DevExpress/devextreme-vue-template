@@ -1,17 +1,17 @@
 <template>
   <dx-scroll-view height="auto" class="dx-card single-card">
-    <slot/>
+    <slot />
   </dx-scroll-view>
 </template>
 
 <script>
-import DxScrollView from 'devextreme-vue/scroll-view'
+import DxScrollView from "devextreme-vue/scroll-view";
 
 export default {
   components: {
     DxScrollView
   }
-}
+};
 </script>
 
 <style lang="scss">

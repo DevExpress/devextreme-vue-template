@@ -2,7 +2,7 @@
   <div class="user-panel">
     <div class="user-info">
       <div class="image-container">
-        <div class="user-image"/>
+        <div class="user-image" />
       </div>
       <div class="user-name">Sandra Johnson</div>
     </div>
@@ -17,32 +17,36 @@
       css-class="user-menu"
     />
 
-    <dx-list v-if="menuMode === 'list'" class="dx-toolbar-menu-action" :items="menuItems"/>
+    <dx-list
+      v-if="menuMode === 'list'"
+      class="dx-toolbar-menu-action"
+      :items="menuItems"
+    />
   </div>
 </template>
 
 <script>
-import DxContextMenu from 'devextreme-vue/context-menu'
-import DxList from 'devextreme-vue/list'
+import DxContextMenu from "devextreme-vue/context-menu";
+import DxList from "devextreme-vue/list";
 
 export default {
   props: {
     menuMode: String,
     menuItems: Array
   },
-  data () {
+  data() {
     return {
       menuPositionConfig: {
-        my: 'top center',
-        at: 'bottom center'
+        my: "top center",
+        at: "bottom center"
       }
-    }
+    };
   },
   components: {
     DxContextMenu,
     DxList
   }
-}
+};
 </script>
 
 <style lang="scss">

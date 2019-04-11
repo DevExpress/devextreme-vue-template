@@ -2,7 +2,7 @@
   <div class="content-block">
     <footer class="footer">
       Copyright © 2011-2019 Developer Express Inc.
-      <br>All trademarks or registered trademarks are property of their
+      <br />All trademarks or registered trademarks are property of their
       respective owners.
     </footer>
   </div>
