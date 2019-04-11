@@ -27,7 +27,7 @@ function getScreenSizeInfo () {
   return {
     isXSmall: screenSizes['screen-x-small'],
     isLarge: screenSizes['screen-large'],
-    CssClasses: Object.keys(screenSizes).filter(cl => screenSizes[cl])
+    cssClasses: Object.keys(screenSizes).filter(cl => screenSizes[cl])
   }
 }
 
@@ -37,13 +37,14 @@ export default {
     const sizeInfo = getScreenSizeInfo()
     return {
       title: this.$appInfo.title,
-      sizeClasses: sizeInfo.classes,
+      sizeClasses: sizeInfo.cssClasses,
       isXSmall: sizeInfo.isXSmall,
       isLarge: sizeInfo.isLarge
     }
   },
   computed: {
     classes () {
+      console.log(this.sizeClasses)
       return ['app'].concat(this.sizeClasses)
     }
   },
