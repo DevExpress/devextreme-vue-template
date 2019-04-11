@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "gh-pages -d dist",
-    "publish": "npm run build && npm run deploy"
+    "publish": "npm run build && npm run deploy",
+    "build-themes": "devextreme build"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -22,6 +23,7 @@
     "@vue/cli-service": "^3.5.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "devextreme-cli": "^1.0.3",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "gh-pages": "^2.0.1",
