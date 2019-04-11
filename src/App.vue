@@ -1,11 +1,11 @@
 <template>
   <div id="root">
-    <div :class="classes">
+    <div :class="cssClasses">
       <router-view
         name="layout"
         :title="title"
-        :is-x-small="isXSmall"
-        :is-large="isLarge"
+        :is-x-small="screen.isXSmall"
+        :is-large="screen.isLarge"
       >
         <div class="content">
           <router-view name="content" />
@@ -39,25 +39,19 @@ function getScreenSizeInfo() {
 export default {
   name: "app",
   data() {
-    const sizeInfo = getScreenSizeInfo();
     return {
       title: this.$appInfo.title,
-      sizeClasses: sizeInfo.cssClasses,
-      isXSmall: sizeInfo.isXSmall,
-      isLarge: sizeInfo.isLarge
+      screen: getScreenSizeInfo()
     };
   },
   computed: {
-    classes() {
-      console.log(this.sizeClasses);
-      return ["app"].concat(this.sizeClasses);
+    cssClasses() {
+      return ["app"].concat(this.screen.cssClasses);
     }
   },
   methods: {
     screenSizeChanged() {
-      const sizeInfo = getScreenSizeInfo();
-      this.isXSmall = sizeInfo.isXSmall;
-      this.isLarge = sizeInfo.isLarge;
+      this.screen = getScreenSizeInfo();
     }
   },
 
