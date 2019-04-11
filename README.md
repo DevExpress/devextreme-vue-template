@@ -1,6 +1,6 @@
 # devextreme-vue-template
 
-The DevExtreme Vue Template allows you to create an application with several views and a hierarchical menu (see the [live preview](https://devexpress.github.io/devextreme-vue-template)).
+The DevExtreme Vue Template allows you to create an application with several views and a hierarchical menu (see the [live preview](https://devexpress.github.io/devextreme-vue-template/)).
 
 ![DevExtreme-Vue-Template](TODO)
 
