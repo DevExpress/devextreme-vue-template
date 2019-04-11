@@ -4,7 +4,7 @@ import 'devextreme/dist/css/dx.common.css'
 import './themes/generated/theme.base.css'
 import './themes/generated/theme.additional.css'
 
-import App from './app'
+import App from './App'
 import router from './router'
 import appInfo from './app-info'
 

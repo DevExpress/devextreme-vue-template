@@ -22,7 +22,7 @@
             ></path>
           </svg>
 
-          <svg class="vue-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196.32 170.02">
+          <svg class="vue-logo" xmlns="http://www.w3.org/2000/svg">
             <polygon style="fill:#41B782;" points="44.3,0 36,14.3 27.7,0 0,0 36,62 72,0 "/>
             <polygon style="fill:#35495E;" points="44.3,0 36,14.3 27.7,0 14.4,0 36,37.2 57.6,0 "/>
             <g>
@@ -62,6 +62,9 @@
         </p>
         <p>The application is built with:</p>
         <ul>
+          <li>
+            <a href="https://cli.vuejs.org/">Vue CLI</a>
+          </li>
           <li>
             <a href="https://github.com/devexpress/devextreme-cli">DevExtreme CLI</a>
           </li>
@@ -127,16 +130,16 @@
 .devextreme-logo {
   width: 200px;
   height: 34px;
-  margin-bottom: 13px;
+  margin-bottom: 17px;
 }
 
 .vue-logo {
-  width: 62px;
+  width: 180px;
   height: 62px;
 }
 
 .plus {
-  margin: 15px 10px;
+  margin: 20px 10px;
   width: 22px;
   height: 22px;
 }
