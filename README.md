@@ -2,7 +2,7 @@
 
 The DevExtreme Vue Template allows you to create an application with several views and a hierarchical menu (see the [live preview](https://devexpress.github.io/devextreme-vue-template/)).
 
-![DevExtreme-Vue-Template](TODO)
+![DevExtreme-Vue-Template](https://user-images.githubusercontent.com/2280467/56042958-edc85800-5d44-11e9-8794-86256ef199ea.png)
 
 You can use [DevExtreme CLI](https://github.com/DevExpress/devextreme-cli) commands to modify, add, and delete views, configure the menu, and change themes.
 
@@ -31,7 +31,7 @@ npm run serve
 
 The application includes a side navigation menu and an outer toolbar.
 
-![Outer Toolbar Layout](TODO)
+![Outer Toolbar Layout](https://user-images.githubusercontent.com/2280467/56042969-f1f47580-5d44-11e9-9310-29dcb0fbff6c.png)
 
 You can set the `--layout` option to `side-nav-inner-toolbar` to use the layout with an inner toolbar.
 
@@ -39,7 +39,7 @@ You can set the `--layout` option to `side-nav-inner-toolbar` to use the layout 
 npx devextreme-cli new vue-app app-name --layout=side-nav-inner-toolbar
 ```
 
-![Inner Toolbar Layout](TODO)
+![Inner Toolbar Layout](https://user-images.githubusercontent.com/2280467/56042973-f3be3900-5d44-11e9-98e3-1a03d0ed1fe3.png)
 
 Use the `--empty` flag to generate an application without views and navigation items.
 
