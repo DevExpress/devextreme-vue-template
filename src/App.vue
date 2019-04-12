@@ -19,10 +19,6 @@
 </template>
 
 <script>
-import "devextreme/dist/css/dx.common.css";
-import "./themes/generated/theme.base.css";
-import "./themes/generated/theme.additional.css";
-
 import TheFooter from "./components/the-footer";
 import { sizes, subscribe, unsubscribe } from "./utils/media-query";
 
