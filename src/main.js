@@ -1,8 +1,7 @@
+import './themes/generated/theme.base.css';
+import './themes/generated/theme.additional.css';
+import 'devextreme/dist/css/dx.common.css';
 import Vue from "vue";
-
-import "devextreme/dist/css/dx.common.css";
-import "./themes/generated/theme.base.css";
-import "./themes/generated/theme.additional.css";
 
 import App from "./App";
 import router from "./router";

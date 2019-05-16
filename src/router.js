@@ -6,9 +6,8 @@ import auth from "./auth";
 import Home from "./views/home";
 import Profile from "./views/profile";
 import DisplayData from "./views/display-data";
-import simpleLayout from "./layouts/single-card";
-// import defaultLayout from './layouts/side-nav-inner-toolbar'
 import defaultLayout from "./layouts/side-nav-outer-toolbar";
+import simpleLayout from "./layouts/single-card";
 
 Vue.use(Router);
 
@@ -41,6 +40,7 @@ const router = new Router({
         content: DisplayData
       }
     },
+    
     {
       path: "/login-form",
       name: "login-form",
@@ -66,14 +66,20 @@ const router = new Router({
       path: "*",
       redirect: "/home"
     }
+    
   ]
 });
 
 router.beforeEach((to, from, next) => {
+
+  if (to.name === "login-form" && auth.authenticated()) {
+    next({ name: "home" });
+  }
+
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (!auth.athenticated()) {
+    if (!auth.authenticated()) {
       next({
-        path: "/login-form",
+        name: "login-form",
         query: { redirect: to.fullPath }
       });
     } else {
