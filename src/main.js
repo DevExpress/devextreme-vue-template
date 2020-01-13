@@ -1,6 +1,6 @@
+import 'devextreme/dist/css/dx.common.css';
 import './themes/generated/theme.base.css';
 import './themes/generated/theme.additional.css';
-import 'devextreme/dist/css/dx.common.css';
 import Vue from "vue";
 
 import App from "./App";
