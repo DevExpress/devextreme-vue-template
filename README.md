@@ -2,7 +2,7 @@
 
 The DevExtreme Vue Template allows you to create an application with several views and a hierarchical menu (see the [live preview](https://devexpress.github.io/devextreme-vue-template/)).
 
-![DevExtreme-Vue-Template](https://user-images.githubusercontent.com/2280467/56042958-edc85800-5d44-11e9-8794-86256ef199ea.png)
+![DevExtreme-Vue-Template](https://user-images.githubusercontent.com/2280467/74528319-0d1dac00-4f39-11ea-964f-b7bc4878c63b.png)
 
 You can use [DevExtreme CLI](https://github.com/DevExpress/devextreme-cli) commands to modify, add, and delete views, configure the menu, and change themes.
 
