@@ -39,9 +39,7 @@ const router = new Router({
         layout: defaultLayout,
         content: DisplayData
       }
-    },
-    
-    {
+    },{
       path: "/login-form",
       name: "login-form",
       meta: { requiresAuth: false },
