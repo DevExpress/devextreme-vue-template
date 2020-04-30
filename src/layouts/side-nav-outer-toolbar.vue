@@ -17,7 +17,7 @@
       :shading="drawerOptions.shaderEnabled"
       :close-on-outside-click="drawerOptions.closeOnOutsideClick"
     >
-      <dx-scroll-view class="with-footer">
+      <dx-scroll-view ref="scrollViewRef" class="with-footer">
         <slot />
         <slot name="footer" />
       </dx-scroll-view>
@@ -25,10 +25,7 @@
       <side-nav-menu
         slot="menu"
         slot-scope="_"
-        class="dx-swatch-additional"
         :compact-mode="!menuOpened"
-        :selected-item="$route.path"
-        :items="menuItems"
         @click="handleSideBarClick"
       />
       <!-- eslint-enable -->
@@ -85,6 +82,9 @@ export default {
     },
     headerMenuTogglerEnabled() {
       return this.isXSmall;
+    },
+    scrollView() {
+      return this.$refs["scrollViewRef"].instance;
     }
   },
   watch: {
@@ -98,6 +98,7 @@ export default {
         this.menuOpened = false;
         this.menuTemporaryOpened = false;
       }
+      this.scrollView.scrollTo(0);
     }
   },
   components: {
