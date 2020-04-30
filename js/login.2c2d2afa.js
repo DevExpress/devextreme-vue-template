@@ -59,4 +59,4 @@
  *
  * https://github.com/DevExpress/devextreme-vue
  */Object.defineProperty(t,"__esModule",{value:!0});var o=n("2b0e"),i=o.default||o,a=n("1efe"),r=n("d710"),l=i.extend({extends:r.DxComponent,props:{accessKey:String,activeStateEnabled:Boolean,disabled:Boolean,elementAttr:Object,focusStateEnabled:Boolean,height:[Function,Number,String],hint:String,hoverStateEnabled:Boolean,isValid:Boolean,name:String,onContentReady:Function,onDisposing:Function,onInitialized:Function,onOptionChanged:Function,onValueChanged:Function,readOnly:Boolean,rtlEnabled:Boolean,tabIndex:Number,text:String,validationError:Object,validationErrors:Array,validationMessageMode:String,validationStatus:String,value:Boolean,visible:Boolean,width:[Function,Number,String]},model:{prop:"value",event:"update:value"},computed:{instance:function(){return this.$_instance}},beforeCreate:function(){this.$_WidgetClass=a.default}});t.DxCheckBox=l,t.default=l}}]);
-//# sourceMappingURL=login.4985cd1f.js.map
+//# sourceMappingURL=login.2c2d2afa.js.map
