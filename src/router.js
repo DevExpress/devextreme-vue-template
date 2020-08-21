@@ -5,7 +5,7 @@ import auth from "./auth";
 
 import Home from "./views/home";
 import Profile from "./views/profile";
-import DisplayData from "./views/display-data";
+import Tasks from "./views/tasks";
 import defaultLayout from "./layouts/side-nav-outer-toolbar";
 import simpleLayout from "./layouts/single-card";
 
@@ -32,14 +32,15 @@ const router = new Router({
       }
     },
     {
-      path: "/display-data",
-      name: "display-data",
+      path: "/tasks",
+      name: "tasks",
       meta: { requiresAuth: true },
       components: {
         layout: defaultLayout,
-        content: DisplayData
+        content: Tasks
       }
-    },{
+    },
+    {
       path: "/login-form",
       name: "login-form",
       meta: { requiresAuth: false },
@@ -64,7 +65,6 @@ const router = new Router({
       path: "*",
       redirect: "/home"
     }
-    
   ]
 });
 
