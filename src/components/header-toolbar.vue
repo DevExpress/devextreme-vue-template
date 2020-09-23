@@ -40,13 +40,12 @@
             height="100%"
             styling-mode="text"
           >
-            <user-panel :user="user" :menu-items="userMenuItems" menu-mode="context" />
+            <user-panel :menu-items="userMenuItems" menu-mode="context" />
           </dx-button>
         </div>
       </dx-item>
       <!-- eslint-disable vue/no-unused-vars -->
       <user-panel
-        :user="user"
         :menu-items="userMenuItems"
         menu-mode="list"
         slot-scope="_"
@@ -69,15 +68,10 @@ export default {
     menuToggleEnabled: Boolean,
     title: String,
     toggleMenuFunc: Function,
-    logOutFunc: Function,
-  },
-  /* eslint-disable no-debugger */
-  created() {
-    auth.getUser().then((e) => this.user = e.data);
+    logOutFunc: Function
   },
   data() {
     return {
-      user: { },
       userMenuItems: [
         {
           text: "Profile",

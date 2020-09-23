@@ -4,7 +4,7 @@
       <div class="image-container">
         <div class="user-image" />
       </div>
-      <div class="user-name">{{user.email}}</div>
+      <div class="user-name">sandra@example.com</div>
     </div>
 
     <dx-context-menu
@@ -33,8 +33,7 @@ import DxList from "devextreme-vue/list";
 export default {
   props: {
     menuMode: String,
-    menuItems: Array,
-    user: Object
+    menuItems: Array
   },
   components: {
     DxContextMenu,
