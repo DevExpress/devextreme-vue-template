@@ -25,7 +25,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11",
-    "devextreme-cli": "1.2.4",
+    "devextreme-cli": "1.2.6",
     "sass-loader": "^7.1.0",
     "devextreme-themebuilder": "^20.2.4"
   },
