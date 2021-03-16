@@ -6,7 +6,7 @@ The DevExtreme Vue Template is a Vue application with a navigation menu and samp
 
 ## Getting Started
 
-For more information about the DevExtreme Vue Template and how to customize it, refer to the following help topic: [Create a DevExtreme Application](https://js.devexpress.com/Documentation/Guide/Vue_Components/Create_a_DevExtreme_Application/).
+For more information about the DevExtreme Vue Template and how to customize it, refer to the following help topic: [Application Template](https://js.devexpress.com/Documentation/Guide/Vue_Components/Application_Template/).
 
 ## License
 
