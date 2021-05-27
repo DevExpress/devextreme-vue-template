@@ -97,13 +97,8 @@ const priorities = [
 ];
 
 export default {
-  data() {
-    return {
-      priorities
-    };
-  },
-  created() {
-    this.dataSourceConfig = {
+  setup() {
+    const dataSourceConfig = {
       store: {
         type: "odata",
         key: "Task_ID",
@@ -120,6 +115,10 @@ export default {
         "Task_Completion",
         "ResponsibleEmployee/Employee_Full_Name"
       ]
+    };
+    return {
+      dataSourceConfig,
+      priorities
     };
   },
   components: {

@@ -1,16 +1,13 @@
 import 'devextreme/dist/css/dx.common.css';
 import './themes/generated/theme.base.css';
 import './themes/generated/theme.additional.css';
-import Vue from "vue";
+import { createApp }  from "vue";
+import router from "./router";
 
 import App from "./App";
-import router from "./router";
 import appInfo from "./app-info";
 
-Vue.config.productionTip = false;
-Vue.prototype.$appInfo = appInfo;
-
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount("#app");
+const app = createApp(App);
+app.use(router);
+app.config.globalProperties.$appInfo = appInfo;
+app.mount('#app');

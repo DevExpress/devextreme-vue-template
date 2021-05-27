@@ -20,9 +20,7 @@
         location="before"
         css-class="header-title dx-toolbar-label"
       >
-        <template>
-          <div>{{ title }}</div>
-        </template>
+        <div>{{ title }}</div>
       </dx-item>
 
       <dx-item
@@ -30,7 +28,7 @@
         locate-in-menu="auto"
         menu-item-template="menuUserItem"
       >
-        <template #default>
+      <template #default>
           <div>
             <dx-button
               class="user-button authorization"
@@ -38,14 +36,15 @@
               height="100%"
               styling-mode="text"
             >
-              <user-panel :user="user" :menu-items="userMenuItems" menu-mode="context" />
+              <user-panel :email="email" :menu-items="userMenuItems" menu-mode="context" />
             </dx-button>
           </div>
         </template>
       </dx-item>
+      
       <template #menuUserItem>
         <user-panel
-          :user="user"
+          :email="email"
           :menu-items="userMenuItems"
           menu-mode="list"
         />
@@ -58,6 +57,8 @@
 import DxButton from "devextreme-vue/button";
 import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
 import auth from "../auth";
+import { useRouter, useRoute } from 'vue-router';
+import { ref } from 'vue';
 
 import UserPanel from "./user-panel";
 
@@ -68,40 +69,43 @@ export default {
     toggleMenuFunc: Function,
     logOutFunc: Function
   },
-  created() {
-    auth.getUser().then((e) => this.user = e.data);
-  },
-  data() {
-    return {
-      user: { },
-      userMenuItems: [
-        {
-          text: "Profile",
-          icon: "user",
-          onClick: this.onProfileClick
-        },
-        {
-          text: "Logout",
-          icon: "runner",
-          onClick: this.onLogoutClick
-        }
-      ]
-    };
-  },
-  methods: {
-    onLogoutClick() {
+  setup() {
+    const router = useRouter();
+    const route = useRoute();
+
+    const email = ref("");
+    auth.getUser().then((e) => email.value = e.data.email);
+    
+    const userMenuItems = [{
+        text: "Profile",
+        icon: "user",
+        onClick: onProfileClick
+      },
+      {
+        text: "Logout",
+        icon: "runner",
+        onClick: onLogoutClick
+    }];
+      
+    function onLogoutClick() {
       auth.logOut();
-      this.$router.push({
+      router.push({
         path: "/login-form",
-        query: { redirect: this.$route.path }
-      });
-    },
-    onProfileClick() {
-      this.$router.push({
-        path: "/profile",
-        query: { redirect: this.$route.path }
+        query: { redirect: route.path }
       });
     }
+
+    function onProfileClick() {
+      router.push({
+        path: "/profile",
+        query: { redirect: route.path }
+      });
+    }
+
+    return {
+      email,
+      userMenuItems
+    };
   },
   components: {
     DxButton,
