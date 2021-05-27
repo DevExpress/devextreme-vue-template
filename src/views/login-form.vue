@@ -74,29 +74,42 @@ import notify from 'devextreme/ui/notify';
 
 import auth from "../auth";
 
-export default {
-  data() {
-    return {
-      formData: {},
-      loading: false
-    };
-  },
-  methods: {
-    onCreateAccountClick() {
-      this.$router.push("/create-account");
-    },
-    onSubmit: async function() {
-      const { email, password } = this.formData;
-      this.loading = true;
+import { reactive, ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
+export default {
+  setup() {
+    const route = useRoute();
+    const router = useRouter();
+
+    const formData = reactive({
+      email:"",
+      password:""
+    });
+    const loading = ref(false);
+
+    function onCreateAccountClick() {
+      router.push("/create-account");
+    }
+
+    async function onSubmit() {
+      const { email, password } = formData;
+      loading.value = true;
       const result = await auth.logIn(email, password);
       if (!result.isOk) {
-        this.loading = false;
+        loading.value = false;
         notify(result.message, "error", 2000);
       } else {
-        this.$router.push(this.$route.query.redirect || "/home");
+        router.push(route.query.redirect || "/home");
       }
     }
+
+    return {
+      formData,
+      loading,
+      onCreateAccountClick,
+      onSubmit
+    };
   },
   components: {
     DxLoadIndicator,

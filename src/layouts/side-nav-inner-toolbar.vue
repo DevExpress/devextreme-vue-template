@@ -3,11 +3,12 @@
     <dx-drawer
       class="drawer"
       position="before"
-      template="menu"
-      :opened.sync="menuOpened"
+      template="menuTemplate"
+      v-model:opened="menuOpened"
       :opened-state-mode="drawerOptions.menuMode"
       :reveal-mode="drawerOptions.menuRevealMode"
       :min-size="drawerOptions.minMenuSize"
+      :max-size="drawerOptions.maxMenuSize"
       :shading="drawerOptions.shaderEnabled"
       :close-on-outside-click="drawerOptions.closeOnOutsideClick"
     >
@@ -21,7 +22,7 @@
           <slot name="footer" />
         </dx-scroll-view>
       </div>
-      <template #menu>
+      <template #menuTemplate>
         <side-nav-menu
           :compact-mode="!menuOpened"
           @click="handleSideBarClick"
@@ -29,19 +30,17 @@
           <dx-toolbar id="navigation-header">
             <dx-item v-if="!isXSmall" location="before" css-class="menu-button">
               <template #default>
-                <dx-button
-                  icon="menu"
-                  styling-mode="text"
-                  @click="toggleMenu"
-                />
+              <dx-button
+                icon="menu"
+                styling-mode="text"
+                @click="toggleMenu"
+              />
               </template>
             </dx-item>
             <dx-item location="before" css-class="header-title dx-toolbar-label">
               <template #default>
-                <div>
-                  <div>{{ title }}</div>
-                </div>
-              </template>
+                <div>{{ title }}</div>
+                </template>
             </dx-item>
           </dx-toolbar>
         </side-nav-menu>
@@ -59,6 +58,8 @@ import DxToolbar, { DxItem } from "devextreme-vue/toolbar";
 import HeaderToolbar from "../components/header-toolbar";
 import SideNavMenu from "../components/side-nav-menu";
 import menuItems from "../app-navigation";
+import { ref, watch, computed } from 'vue';
+import { useRoute } from 'vue-router';
 
 export default {
   props: {
@@ -66,59 +67,77 @@ export default {
     isXSmall: Boolean,
     isLarge: Boolean
   },
-  methods: {
-    toggleMenu(e) {
+  setup(props) {
+    const route = useRoute();
+    
+    const scrollViewRef = ref(null);
+    const menuOpened = ref(props.isLarge);
+    const menuTemporaryOpened = ref(false);
+
+    function toggleMenu (e) {
       const pointerEvent = e.event;
       pointerEvent.stopPropagation();
-      if (this.menuOpened) {
-        this.menuTemporaryOpened = false;
+      if (menuOpened.value) {
+        menuTemporaryOpened.value = false;
       }
-      this.menuOpened = !this.menuOpened;
-    },
-    handleSideBarClick() {
-      if (this.menuOpened === false) this.menuTemporaryOpened = true;
-      this.menuOpened = true;
+
+      menuOpened.value = !menuOpened.value;
     }
-  },
-  data() {
-    return {
-      menuOpened: this.isLarge,
-      menuTemporaryOpened: false,
-      menuItems
-    };
-  },
-  computed: {
-    drawerOptions() {
-      const shaderEnabled = !this.isLarge;
+
+    function handleSideBarClick () {
+      if (menuOpened.value === false) {
+        menuTemporaryOpened.value = true;
+      }
+
+      menuOpened.value = true;
+    }
+
+    const drawerOptions = computed(() => {
+      const shaderEnabled = !props.isLarge;
+
       return {
-        menuMode: this.isLarge ? "shrink" : "overlap",
-        menuRevealMode: this.isXSmall ? "slide" : "expand",
-        minMenuSize: this.isXSmall ? 0 : 60,
-        menuOpened: this.isLarge,
+        menuMode: props.isLarge ? "shrink" : "overlap",
+        menuRevealMode: props.isXSmall ? "slide" : "expand",
+        minMenuSize: props.isXSmall ? 0 : 60,
+        maxMenuSize: props.isXSmall ? 250 : undefined,
         closeOnOutsideClick: shaderEnabled,
         shaderEnabled
       };
-    },
-    headerMenuTogglerEnabled() {
-      return this.isXSmall;
-    },
-    scrollView() {
-      return this.$refs["scrollViewRef"].instance;
-    }
-  },
-  watch: {
-    isLarge() {
-      if (!this.menuTemporaryOpened) {
-        this.menuOpened = this.isLarge;
+    });
+
+    const headerMenuTogglerEnabled = computed(() => {
+      return props.isXSmall;
+    });
+
+    watch(
+      () => props.isLarge,
+      () => {
+        if (!menuTemporaryOpened.value) {
+          menuOpened.value = props.isLarge;
+        }
       }
-    },
-    $route() {
-      if (this.menuTemporaryOpened || !this.isLarge) {
-        this.menuOpened = false;
-        this.menuTemporaryOpened = false;
+    );
+    
+    watch(
+      () => route.path,
+      () => {
+        if (menuTemporaryOpened.value || !props.isLarge) {
+          menuOpened.value = false;
+          menuTemporaryOpened.value = false;
+        }
+        scrollViewRef.value.instance.scrollTo(0);
       }
-      this.scrollView.scrollTo(0);
-    }
+    );
+
+    return {
+      scrollViewRef,
+      menuOpened,
+      drawerOptions,
+      menuItems,
+      headerMenuTogglerEnabled,
+      toggleMenu,
+      handleSideBarClick
+    };
   },
   components: {
     DxButton,

@@ -27,33 +27,37 @@ export default {
   props: {
     picture: String
   },
-  data() {
+  setup() {
     const picture = "images/employees/06.png";
-    return {
-      imageSrc: `https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/${picture}`,
-      formData: {
-        ID: 7,
-        FirstName: "Sandra",
-        LastName: "Johnson",
-        Prefix: "Mrs.",
-        Position: "Controller",
-        Picture: picture,
-        BirthDate: new Date("1974/11/15"),
-        HireDate: new Date("2005/05/11"),
-        Notes:
+    
+    const imageSrc = `https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/${picture}`;
+    const formData = {
+      ID: 7,
+      FirstName: "Sandra",
+      LastName: "Johnson",
+      Prefix: "Mrs.",
+      Position: "Controller",
+      Picture: picture,
+      BirthDate: new Date("1974/11/15"),
+      HireDate: new Date("2005/05/11"),
+      Notes:
+        "Sandra is a CPA and has been our controller since 2008. " +
+        "She loves to interact with staff so if you`ve not met her, be certain to say hi." +
+        "\r\n\r\n" +
+        "Sandra has 2 daughters both of whom are accomplished gymnasts.",
+      Address: "4600 N Virginia Rd."
+    };
+    const colCountByScreen = {
+      xs: 1,
+      sm: 2,
+      md: 3,
+      lg: 4
+    }
 
-          "Sandra is a CPA and has been our controller since 2008. " +
-          "She loves to interact with staff so if you`ve not met her, be certain to say hi." +
-          "\r\n\r\n" +
-          "Sandra has 2 daughters both of whom are accomplished gymnasts.",
-        Address: "4600 N Virginia Rd."
-      },
-      colCountByScreen: {
-        xs: 1,
-        sm: 2,
-        md: 3,
-        lg: 4
-      }
+    return {
+      imageSrc,
+      formData,
+      colCountByScreen
     };
   },
   components: {
