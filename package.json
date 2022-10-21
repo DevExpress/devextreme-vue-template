@@ -12,7 +12,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "node-sass": "^7.0.1",
+    "node-sass": "^7.0.3",
     "vue-router": "^3.0.1",
     "devextreme": "^21.2.3",
     "devextreme-vue": "^21.2.3"
