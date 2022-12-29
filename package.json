@@ -14,8 +14,8 @@
     "vue": "^2.6.11",
     "node-sass": "^7.0.3",
     "vue-router": "^3.0.1",
-    "devextreme": "^21.2.3",
-    "devextreme-vue": "^21.2.3"
+    "devextreme": "^22.2.3",
+    "devextreme-vue": "^22.2.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
