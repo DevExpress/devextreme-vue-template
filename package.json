@@ -1,5 +1,5 @@
 {
-  "name": "devextreme-vue-template",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,24 +10,24 @@
     "postinstall": "npm run build-themes"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "node-sass": "^7.0.3",
-    "vue-router": "^3.0.1",
-    "devextreme": "^22.2.3",
-    "devextreme-vue": "^22.2.3"
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "sass": "^1.34.1",
+    "vue-router": "^4.0.1",
+    "devextreme": "23.2-next",
+    "devextreme-vue": "23.2-next"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.0",
-    "@vue/cli-service": "^4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11",
-    "devextreme-cli": "^1.2.24",
-    "sass-loader": "^7.1.0",
-    "devextreme-themebuilder": "^21.2.3"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "devextreme-cli": "1.6.3",
+    "sass-loader": "^10",
+    "devextreme-themebuilder": "23.2-next"
   },
   "eslintConfig": {
     "root": true,
@@ -35,17 +35,18 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     },
     "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie 11"
   ]
 }

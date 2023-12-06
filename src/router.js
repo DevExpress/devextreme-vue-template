@@ -1,105 +1,86 @@
-import Vue from "vue";
-import Router from "vue-router";
-
+import NewPage from './views/new-page';
 import auth from "./auth";
+import { createRouter, createWebHashHistory } from "vue-router";
 
-import Home from "./views/home";
-import Profile from "./views/profile";
-import Tasks from "./views/tasks";
+import Home from "./views/home-page";
+import Profile from "./views/profile-page";
+import Tasks from "./views/tasks-page";
 import defaultLayout from "./layouts/side-nav-outer-toolbar";
 import simpleLayout from "./layouts/single-card";
 
-Vue.use(Router);
+function loadView(view) {
+  return () => import (/* webpackChunkName: "login" */ `./views/${view}.vue`)
+}
 
-const router = new Router({
+const router = new createRouter({
   routes: [
     {
       path: "/home",
       name: "home",
-      meta: { requiresAuth: true },
-      components: {
-        layout: defaultLayout,
-        content: Home
-      }
+      meta: {
+        requiresAuth: true,
+        layout: defaultLayout
+      },
+      component: Home
     },
     {
       path: "/profile",
       name: "profile",
-      meta: { requiresAuth: true },
-      components: {
-        layout: defaultLayout,
-        content: Profile
-      }
+      meta: {
+        requiresAuth: true,
+        layout: defaultLayout
+      },
+      component: Profile
     },
     {
       path: "/tasks",
       name: "tasks",
-      meta: { requiresAuth: true },
-      components: {
-        layout: defaultLayout,
-        content: Tasks
-      }
+      meta: {
+        requiresAuth: true,
+        layout: defaultLayout
+      },
+      component: Tasks
     },
     {
       path: "/login-form",
       name: "login-form",
-      meta: { requiresAuth: false },
-      components: {
+      meta: {
+        requiresAuth: false,
         layout: simpleLayout,
-        content: () =>
-          import(/* webpackChunkName: "login" */ "./views/login-form")
+        title: "Sign In"
       },
-      props: {
-        layout: {
-          title: "Sign In"
-        }
-      }
+      component: loadView("login-form")
     },
     {
       path: "/reset-password",
       name: "reset-password",
-      meta: { requiresAuth: false },
-      components: {
+      meta: {
+        requiresAuth: false,
         layout: simpleLayout,
-        content: () =>
-          import(/* webpackChunkName: "login" */ "./views/reset-password-form")
+        title: "Reset Password",
+        description: "Please enter the email address that you used to register, and we will send you a link to reset your password via Email."
       },
-      props: {
-        layout: {
-          title: "Reset Password",
-          description: "Please enter the email address that you used to register, and we will send you a link to reset your password via Email."
-        }
-      }
+      component: loadView("reset-password-form")
     },
     {
       path: "/create-account",
       name: "create-account",
-      meta: { requiresAuth: false },
-      components: {
+      meta: {
+        requiresAuth: false,
         layout: simpleLayout,
-        content: () =>
-          import(/* webpackChunkName: "login" */ "./views/create-account-form")
+        title: "Sign Up"
       },
-      props: {
-        layout: {
-          title: "Sign Up"
-        }
-      }
+      component: loadView("create-account-form"),
     },
     {
       path: "/change-password/:recoveryCode",
       name: "change-password",
-      meta: { requiresAuth: false },
-      components: {
+      meta: {
+        requiresAuth: false,
         layout: simpleLayout,
-        content: () =>
-          import(/* webpackChunkName: "login" */ "./views/change-password-form")
+        title: "Change Password"
       },
-      props: {
-        layout: {
-          title: "Change Password"
-        }
-      }
+      component: loadView("change-password-form")
     },
     {
       path: "/",
@@ -110,10 +91,20 @@ const router = new Router({
       redirect: "/home"
     },
     {
-      path: "*",
+      path: "/:pathMatch(.*)*",
       redirect: "/home"
+    }, 
+    {
+      path: "/new-page",
+      name: "new-page",
+      meta: {
+        requiresAuth: true,
+        layout: defaultLayout
+      },
+      component: NewPage
     }
-  ]
+  ],
+  history: createWebHashHistory()
 });
 
 router.beforeEach((to, from, next) => {

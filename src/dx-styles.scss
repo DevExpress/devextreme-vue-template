@@ -1,11 +1,27 @@
 .content {
   line-height: 1.5;
+  flex-grow: 1;
 
   h2 {
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
+}
+
+.container {
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.layout-body {
+  flex: 1;
+  min-height: 0;
+}
+
+.side-nav-outer-toolbar .dx-drawer {
+  height: calc(100% - 56px)
 }
 
 .content-block {
@@ -45,5 +61,9 @@
     min-height: 100%;
   }
 }
+
+#app {
+  height: 100%;
+ }
 
 $side-panel-min-width: 60px;

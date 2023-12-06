@@ -15,7 +15,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'
+        node-version: '16'
 
     - name: Restore npm cache
       uses: actions/cache@v3
@@ -36,9 +36,15 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
       with:
-        branch: gh-pages
-        folder: dist
-        target-folder: .
+        name: build-artifacts
+        path: dist
+
+    # - name: Deploy
+    #   uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6
+    #   with:
+    #     branch: gh-pages
+    #     folder: dist
+    #     target-folder: .
