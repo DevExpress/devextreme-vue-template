@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "/devextreme-vue-template"
+  publicPath: "https://devexpress.github.io/devextreme-vue-template"
 };
