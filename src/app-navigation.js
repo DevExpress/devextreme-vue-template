@@ -17,10 +17,5 @@ export default [
         path: "/tasks"
       }
     ]
-  }, 
-  {
-    text: 'New Page',
-    path: '/new-page',
-    icon: 'folder'
   }
   ];

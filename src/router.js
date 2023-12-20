@@ -1,4 +1,3 @@
-import NewPage from './views/new-page';
 import auth from "./auth";
 import { createRouter, createWebHashHistory } from "vue-router";
 
@@ -93,15 +92,6 @@ const router = new createRouter({
     {
       path: "/:pathMatch(.*)*",
       redirect: "/home"
-    }, 
-    {
-      path: "/new-page",
-      name: "new-page",
-      meta: {
-        requiresAuth: true,
-        layout: defaultLayout
-      },
-      component: NewPage
     }
   ],
   history: createWebHashHistory()
