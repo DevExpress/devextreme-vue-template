@@ -12,7 +12,7 @@ const mediumMedia = window.matchMedia(Breakpoints.Medium);
 const largeMedia = window.matchMedia(Breakpoints.Large);
 
 [xSmallMedia, smallMedia, mediumMedia, largeMedia].forEach(media => {
-  media.addEventListener('change',() => {
+  media.addListener(() => {
     handlers.forEach(handler => handler());
   });
 });

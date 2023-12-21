@@ -97,14 +97,10 @@ const priorities = [
 ];
 
 export default {
-  data() {
-    return {
-      priorities
-    };
-  },
-  created() {
-    this.dataSourceConfig = {
+  setup() {
+    const dataSourceConfig = {
       store: {
+        version: 2,
         type: "odata",
         key: "Task_ID",
         url: "https://js.devexpress.com/Demos/DevAV/odata/Tasks"
@@ -120,6 +116,10 @@ export default {
         "Task_Completion",
         "ResponsibleEmployee/Employee_Full_Name"
       ]
+    };
+    return {
+      dataSourceConfig,
+      priorities
     };
   },
   components: {
