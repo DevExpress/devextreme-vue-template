@@ -1,5 +1,7 @@
 import 'devextreme/dist/css/dx.common.css';
+import './themes/generated/theme.base.dark.css';
 import './themes/generated/theme.base.css';
+import './themes/generated/theme.additional.dark.css';
 import './themes/generated/theme.additional.css';
 import { createApp }  from "vue";
 import router from "./router";
