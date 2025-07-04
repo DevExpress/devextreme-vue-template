@@ -52,7 +52,7 @@ import auth from "../auth";
 import { useRouter, useRoute } from 'vue-router';
 import { ref } from 'vue';
 
-import UserPanel from "./user-panel";
+import UserPanel from "./user-panel.vue";
 import ThemeSwitcher from './theme-switcher.vue';
 
 export default {
@@ -143,7 +143,7 @@ header {
 }
 
 .dx-theme-generic {
-  .dx-toolbar {
+  .header-toolbar {
     padding: 10px 0;
   }
 
