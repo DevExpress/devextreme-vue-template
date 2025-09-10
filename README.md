@@ -1,6 +1,6 @@
 # DevExtreme Vue Template
 
-The DevExtreme Vue Template is a Vue application with a navigation menu and sample views in a responsive layout (see a [live preview](https://devexpress.github.io/devextreme-vue-template/)). This application is created with [Vue CLI](https://cli.vuejs.org/) and uses [DevExtreme Vue components](https://js.devexpress.com/Documentation/Guide/Vue_Components/DevExtreme_Vue_Components/).
+The DevExtreme Vue Template is a Vue application with a navigation menu and sample views in a responsive layout (see a [live preview](https://devexpress.github.io/devextreme-vue-template/)). This application is created with [Vite](https://vite.dev/guide/) and uses [DevExtreme Vue components](https://js.devexpress.com/Documentation/Guide/Vue_Components/DevExtreme_Vue_Components/).
 
 ![DevExtreme-Vue-Template](vue-template.png)
 
