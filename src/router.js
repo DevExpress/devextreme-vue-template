@@ -1,11 +1,11 @@
 import auth from "./auth";
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import Home from "./views/home-page.vue";
-import Profile from "./views/profile-page.vue";
-import Tasks from "./views/tasks-page.vue";
-import defaultLayout from "./layouts/side-nav-outer-toolbar.vue";
-import simpleLayout from "./layouts/single-card.vue";
+import Home from "./views/home-page";
+import Profile from "./views/profile-page";
+import Tasks from "./views/tasks-page";
+import defaultLayout from "./layouts/side-nav-outer-toolbar";
+import simpleLayout from "./layouts/single-card";
 
 function loadView(view) {
   return () => import (/* webpackChunkName: "login" */ `./views/${view}.vue`)

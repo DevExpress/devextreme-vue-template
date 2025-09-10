@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import "devextreme-vue/common/data";
+import "devextreme/data/odata/store";
 import DxDataGrid, {
   DxColumn,
   DxFilterRow,

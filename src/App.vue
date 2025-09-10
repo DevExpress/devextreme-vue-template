@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import AppFooter from "./components/app-footer.vue";
+import AppFooter from "./components/app-footer";
 import { sizes, subscribe, unsubscribe } from "./utils/media-query";
 import {
   getCurrentInstance,
