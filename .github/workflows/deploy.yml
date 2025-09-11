@@ -23,14 +23,16 @@ jobs:
         path: ./node_modules
         key: ${{ runner.os }}-node-modules
 
-    - name: Run npm install
-      run: npm install --no-audit --no-fund
+    - name: Install dependencies (npm ci)
+      run: npm ci --no-audit --no-fund
 
     - name: Install Internal Package
       uses: DevExpress/github-actions/install-internal-package@main
 
     - name: Build
-      run: npm run build
+      run: |
+        rm -rf dist
+        npx vite build --base "/devextreme-vue-template/"
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6
