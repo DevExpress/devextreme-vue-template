@@ -28,6 +28,6 @@
     "vite": "^7.3.2",
     "vite-plugin-vue-devtools": "^7.7.7",
     "devextreme-cli": "1.13.0",
-    "devextreme-themebuilder": "25.2.3"
+    "devextreme-themebuilder": "25.2.6"
   }
 }
