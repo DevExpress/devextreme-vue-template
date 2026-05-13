@@ -16,7 +16,7 @@
     "vue": "^3.5.17",
     "sass-embedded": "^1.85.1",
     "vue-router": "^4.0.1",
-    "devextreme": "25.2.3",
+    "devextreme": "25.2.7",
     "devextreme-vue": "25.2.3"
   },
   "devDependencies": {
