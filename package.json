@@ -29,5 +29,8 @@
     "vite-plugin-vue-devtools": "^7.7.7",
     "devextreme-cli": "1.13.0",
     "devextreme-themebuilder": "25.2.3"
+  },
+  "engines": {
+    "node": "24.15.0"
   }
 }
