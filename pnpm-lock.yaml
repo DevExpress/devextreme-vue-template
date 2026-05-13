@@ -34,8 +34,8 @@ importers:
         specifier: 1.13.0
         version: 1.13.0
       devextreme-themebuilder:
-        specifier: 25.2.3
-        version: 25.2.3(bootstrap@5.3.8(@popperjs/core@2.11.8))
+        specifier: 25.2.7
+        version: 25.2.7(bootstrap@5.3.8(@popperjs/core@2.11.8))
       eslint:
         specifier: ^9.29.0
         version: 9.39.4
@@ -912,8 +912,8 @@ packages:
   devextreme-quill@1.7.7:
     resolution: {integrity: sha512-tRAdHOxGGTb5TSX2o4v7nTsXe567tdyipbehF28h2OH6pJNNLzCjWw5JAd2UHMbh6VG0bg+3xshsn9DJwX4P0Q==}
 
-  devextreme-themebuilder@25.2.3:
-    resolution: {integrity: sha512-7anhgvZ8NMS8QtTIavXT19aq92n5qm7mAFvNH25bzoqybB+cydQr+z+xQkoTNeprdZuC5c/CBfZJppi12IuXWA==}
+  devextreme-themebuilder@25.2.7:
+    resolution: {integrity: sha512-EobgE5JTGFvYuJs/QnBaaZLEK+gxZLx+T+Q4qEjCtGiaaWrGZQXlBo6K1DgRunAOLn/G7+zf+XwcQXY/TlnyQg==}
     peerDependencies:
       bootstrap: ^5.3.8
 
@@ -2691,7 +2691,7 @@ snapshots:
       parchment: 2.0.1
       quill-delta: 5.1.0
 
-  devextreme-themebuilder@25.2.3(bootstrap@5.3.8(@popperjs/core@2.11.8)):
+  devextreme-themebuilder@25.2.7(bootstrap@5.3.8(@popperjs/core@2.11.8)):
     dependencies:
       autoprefixer: 10.5.0(postcss@8.5.10)
       bootstrap: 5.3.8(@popperjs/core@2.11.8)
