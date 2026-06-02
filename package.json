@@ -1,7 +1,7 @@
 {
   "name": "devextreme-vue-template",
   "version": "0.1.0",
-  "packageManager": "pnpm@9.15.9",
+  "packageManager": "pnpm@11.5.1",
   "private": true,
   "type": "module",
   "scripts": {
