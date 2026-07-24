@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       devextreme:
-        specifier: 25.2.3
-        version: 25.2.3
+        specifier: 25.2.8
+        version: 25.2.8(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0))
       devextreme-vue:
         specifier: 25.2.3
-        version: 25.2.3(devextreme@25.2.3)(vue@3.5.32)
+        version: 25.2.3(devextreme@25.2.8(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0)))(vue@3.5.32)
       sass-embedded:
         specifier: ^1.99.0
         version: 1.99.0
@@ -248,8 +248,8 @@ packages:
   '@bufbuild/protobuf@2.11.0':
     resolution: {integrity: sha512-sBXGT13cpmPR5BMgHE6UEEfEaShh5Ror6rfN3yEK5si7QVrtZg8LEPQb0VVhiLRUslD2yLnXtnRzG035J/mZXQ==}
 
-  '@devexpress/utils@1.4.8':
-    resolution: {integrity: sha512-XVqyeYjqWjbcAUOxaUc6f93MATuVyFE2eec10Qm7X3/QLkKPBh2cJt5OOw4bkW4fC8SG8NZwjVITt08Tr+CXpQ==}
+  '@devexpress/utils@2.1.2':
+    resolution: {integrity: sha512-QC5x5x5pKTqAG+HViELW9JkZ/xxi0Qok+LqMfxZ+m+MGnb9/T/3dUfmaW6x4c6N44TSlSWnoQmSL+teqnT3Dkw==}
 
   '@emnapi/core@1.10.0':
     resolution: {integrity: sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw==}
@@ -931,19 +931,19 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  devexpress-diagram@2.2.24:
-    resolution: {integrity: sha512-PD3mW50OFS44PnqUq2ywJHYDeNFWCIPhXCeLHkzg2BEdDufGGpW73Ux5z3F9NtW91sP0qNE1f1PrsR+3CIN0jA==}
+  devexpress-diagram@2.2.29:
+    resolution: {integrity: sha512-6QS1zKP736QlIU6lMeZdq52Fe85BSa6vh1TwDIxSAKNwT6gHnGKm5paI71epRJ9H6GC4SLtv/zhlH8QCjwNnXQ==}
 
-  devexpress-gantt@4.1.64:
-    resolution: {integrity: sha512-q9+diTugmzf3YNzQ4Xutr7ndgCAdpH7IyjTzGy2SiY5I+ePf2BaAZ0R3LGADBC5TuFS2OamIhF0HOj4ALgkf+A==}
+  devexpress-gantt@4.1.69:
+    resolution: {integrity: sha512-UPrVT/U7voNRYLP1Kk5DEM7OB7WT2XwDiJi6zzAZOqhFu6sCuAViwth+WVQ7HmgWDNIyCxc/+cB13qq1p244lg==}
 
   devextreme-cli@1.13.0:
     resolution: {integrity: sha512-ME9yvSyfFy9I4XmaP0VLNW3vGCFab/rD7RsuYobA4TajSzFOB71acvaurLWFm6WujEM/j0OmZnxy6G/vClV1dw==}
     engines: {node: '>20.19.0', npm: '>9.6.0', yarn: '>1.21'}
     hasBin: true
 
-  devextreme-quill@1.7.7:
-    resolution: {integrity: sha512-tRAdHOxGGTb5TSX2o4v7nTsXe567tdyipbehF28h2OH6pJNNLzCjWw5JAd2UHMbh6VG0bg+3xshsn9DJwX4P0Q==}
+  devextreme-quill@1.7.9:
+    resolution: {integrity: sha512-UEkR16+I/7P/4+7dUmc65lv+VRdRGk0kFvZXgHnM2UFcEBKqm1kVDdVPBolGRFwuOFuDttJxp2SXUAyiuSC8wA==}
 
   devextreme-themebuilder@25.2.3:
     resolution: {integrity: sha512-7anhgvZ8NMS8QtTIavXT19aq92n5qm7mAFvNH25bzoqybB+cydQr+z+xQkoTNeprdZuC5c/CBfZJppi12IuXWA==}
@@ -956,8 +956,8 @@ packages:
       devextreme: 25.2.3
       vue: ^3.0.0
 
-  devextreme@25.2.3:
-    resolution: {integrity: sha512-g4SawI5lVKnzIHmlxEUKjUmghDPloNmFFV8olq3/RJfo36YBkYixvjehbM5nwtXW6ftHlCMmjWE6eU9SNw96RA==}
+  devextreme@25.2.8:
+    resolution: {integrity: sha512-ri/Cv8Pi7bxq8CKdmKK0o58vlBhpjEySqC1sikBzBS30zzVuHhDkR01eiGMP0URHLaWk4H6349zxM5FQpBNRTA==}
     hasBin: true
 
   electron-to-chromium@1.5.375:
@@ -1827,6 +1827,39 @@ packages:
     resolution: {integrity: sha512-5lWVjgi6vuHhJ526bI4nlCOmkCIF3nnfXkCMDeMJrtdvxTs6ZFCM8oNufGTsDbKv/tJ/xj8RpvXjRuPBZJuJog==}
     engines: {node: '>=20.19.0'}
 
+  unplugin@3.3.0:
+    resolution: {integrity: sha512-qa66K+crbfyE6JK10GjvbJeRrOsuC/JpbnHctfyp/i4oBTxWOzJfRZyDiOk1PtErMFRu8JhsU/wPvOdBNWe5Rg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@farmfe/core': '*'
+      '@rspack/core': '*'
+      bun-types-no-globals: '*'
+      esbuild: '*'
+      rolldown: '*'
+      rollup: '*'
+      unloader: '*'
+      vite: '*'
+      webpack: '*'
+    peerDependenciesMeta:
+      '@farmfe/core':
+        optional: true
+      '@rspack/core':
+        optional: true
+      bun-types-no-globals:
+        optional: true
+      esbuild:
+        optional: true
+      rolldown:
+        optional: true
+      rollup:
+        optional: true
+      unloader:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
     hasBin: true
@@ -1934,6 +1967,9 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  webpack-virtual-modules@0.6.2:
+    resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
@@ -2212,7 +2248,7 @@ snapshots:
 
   '@bufbuild/protobuf@2.11.0': {}
 
-  '@devexpress/utils@1.4.8':
+  '@devexpress/utils@2.1.2':
     dependencies:
       tslib: 2.3.1
 
@@ -2767,14 +2803,14 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  devexpress-diagram@2.2.24:
+  devexpress-diagram@2.2.29:
     dependencies:
-      '@devexpress/utils': 1.4.8
+      '@devexpress/utils': 2.1.2
       es6-object-assign: 1.1.0
 
-  devexpress-gantt@4.1.64:
+  devexpress-gantt@4.1.69:
     dependencies:
-      '@devexpress/utils': 1.4.8
+      '@devexpress/utils': 2.1.2
       tslib: 2.3.1
 
   devextreme-cli@1.13.0:
@@ -2789,7 +2825,7 @@ snapshots:
       semver: 5.7.2
       strip-bom: 4.0.0
 
-  devextreme-quill@1.7.7:
+  devextreme-quill@1.7.9:
     dependencies:
       core-js: 3.49.0
       eventemitter3: 4.0.7
@@ -2806,23 +2842,34 @@ snapshots:
       postcss: 8.5.10
       sass-embedded: 1.66.0
 
-  devextreme-vue@25.2.3(devextreme@25.2.3)(vue@3.5.32):
+  devextreme-vue@25.2.3(devextreme@25.2.8(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0)))(vue@3.5.32):
     dependencies:
-      devextreme: 25.2.3
+      devextreme: 25.2.8(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0))
       vue: 3.5.32
 
-  devextreme@25.2.3:
+  devextreme@25.2.8(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0)):
     dependencies:
       '@babel/runtime': 7.29.2
       '@preact/signals-core': 1.14.1
-      devexpress-diagram: 2.2.24
-      devexpress-gantt: 4.1.64
-      devextreme-quill: 1.7.7
+      devexpress-diagram: 2.2.29
+      devexpress-gantt: 4.1.69
+      devextreme-quill: 1.7.9
       inferno: 8.2.3
       inferno-create-element: 8.2.3
       inferno-hydrate: 8.2.3
       jszip: 3.10.1
       rrule: 2.8.1
+      unplugin: 3.3.0(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0))
+    transitivePeerDependencies:
+      - '@farmfe/core'
+      - '@rspack/core'
+      - bun-types-no-globals
+      - esbuild
+      - rolldown
+      - rollup
+      - unloader
+      - vite
+      - webpack
 
   electron-to-chromium@1.5.375: {}
 
@@ -3295,8 +3342,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  picomatch@4.0.5:
-    optional: true
+  picomatch@4.0.5: {}
 
   pify@4.0.1:
     optional: true
@@ -3600,6 +3646,16 @@ snapshots:
       pathe: 2.0.3
       picomatch: 4.0.4
 
+  unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.0.3)(vite@8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0)):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      picomatch: 4.0.5
+      webpack-virtual-modules: 0.6.2
+    optionalDependencies:
+      esbuild: 0.28.1
+      rolldown: 1.0.3
+      vite: 8.0.16(esbuild@0.28.1)(sass-embedded@1.99.0)(sass@1.99.0)
+
   update-browserslist-db@1.2.3(browserslist@4.28.2):
     dependencies:
       browserslist: 4.28.2
@@ -3703,6 +3759,8 @@ snapshots:
       '@vue/runtime-dom': 3.5.32
       '@vue/server-renderer': 3.5.32(vue@3.5.32)
       '@vue/shared': 3.5.32
+
+  webpack-virtual-modules@0.6.2: {}
 
   which@2.0.2:
     dependencies:
