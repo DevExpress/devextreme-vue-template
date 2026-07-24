@@ -34,8 +34,8 @@ importers:
         specifier: 1.13.0
         version: 1.13.0
       devextreme-themebuilder:
-        specifier: 25.2.3
-        version: 25.2.3(bootstrap@5.3.8(@popperjs/core@2.11.8))
+        specifier: 25.2.8
+        version: 25.2.8(bootstrap@5.3.8(@popperjs/core@2.11.8))
       esbuild:
         specifier: ^0.28.1
         version: 0.28.1
@@ -848,9 +848,6 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001788:
-    resolution: {integrity: sha512-6q8HFp+lOQtcf7wBK+uEenxymVWkGKkjFpCvw5W25cmMwEDU45p1xQFBQv8JDlMMry7eNxyBaR+qxgmTUZkIRQ==}
-
   caniuse-lite@1.0.30001799:
     resolution: {integrity: sha512-hG1bReV+OUU+MOqK4t/ZWI0tZOyz3rqS9XuhOUz1cIcbwBKjOyJEJuw9ER5JuNyqxNk8u/JUVbGibBOL1yrjFw==}
 
@@ -945,8 +942,8 @@ packages:
   devextreme-quill@1.7.7:
     resolution: {integrity: sha512-tRAdHOxGGTb5TSX2o4v7nTsXe567tdyipbehF28h2OH6pJNNLzCjWw5JAd2UHMbh6VG0bg+3xshsn9DJwX4P0Q==}
 
-  devextreme-themebuilder@25.2.3:
-    resolution: {integrity: sha512-7anhgvZ8NMS8QtTIavXT19aq92n5qm7mAFvNH25bzoqybB+cydQr+z+xQkoTNeprdZuC5c/CBfZJppi12IuXWA==}
+  devextreme-themebuilder@25.2.8:
+    resolution: {integrity: sha512-/1cqQ49tY3r7Lm6iVXYg6HF9DF/A6HFw1b91JSOzGCEZvxk7tsFyD1JxU3mkHngZoENt3MFu9115y12LvJy1ww==}
     peerDependencies:
       bootstrap: ^5.3.8
 
@@ -1381,11 +1378,6 @@ packages:
   mustache@3.2.1:
     resolution: {integrity: sha512-RERvMFdLpaFfSRIEe632yDm5nsd0SDKn8hGmcUwswnyiE5mtdZLDybtHAz6hjJhawokF0hXvGLtx9mrQfm6FkA==}
     engines: {npm: '>=1.4.0'}
-    hasBin: true
-
-  nanoid@3.3.11:
-    resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
   nanoid@3.3.12:
@@ -2659,13 +2651,13 @@ snapshots:
 
   argparse@2.0.1: {}
 
-  autoprefixer@10.5.0(postcss@8.5.10):
+  autoprefixer@10.5.0(postcss@8.5.15):
     dependencies:
       browserslist: 4.28.2
-      caniuse-lite: 1.0.30001788
+      caniuse-lite: 1.0.30001799
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.10
+      postcss: 8.5.15
       postcss-value-parser: 4.2.0
 
   balanced-match@1.0.2: {}
@@ -2702,8 +2694,6 @@ snapshots:
       run-applescript: 7.1.0
 
   callsites@3.1.0: {}
-
-  caniuse-lite@1.0.30001788: {}
 
   caniuse-lite@1.0.30001799: {}
 
@@ -2798,12 +2788,12 @@ snapshots:
       parchment: 2.0.1
       quill-delta: 5.1.0
 
-  devextreme-themebuilder@25.2.3(bootstrap@5.3.8(@popperjs/core@2.11.8)):
+  devextreme-themebuilder@25.2.8(bootstrap@5.3.8(@popperjs/core@2.11.8)):
     dependencies:
-      autoprefixer: 10.5.0(postcss@8.5.10)
+      autoprefixer: 10.5.0(postcss@8.5.15)
       bootstrap: 5.3.8(@popperjs/core@2.11.8)
       clean-css: 5.3.3
-      postcss: 8.5.10
+      postcss: 8.5.15
       sass-embedded: 1.66.0
 
   devextreme-vue@25.2.3(devextreme@25.2.3)(vue@3.5.32):
@@ -3225,8 +3215,6 @@ snapshots:
 
   mustache@3.2.1: {}
 
-  nanoid@3.3.11: {}
-
   nanoid@3.3.12: {}
 
   native-request@1.1.2:
@@ -3310,7 +3298,7 @@ snapshots:
 
   postcss@8.5.10:
     dependencies:
-      nanoid: 3.3.11
+      nanoid: 3.3.12
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
