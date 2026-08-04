@@ -3,3 +3,7 @@ allowBuilds:
   core-js: true
   esbuild: true
   inferno: true
+minimumReleaseAgeExclude:
+  - brace-expansion@5.0.9
+overrides:
+  brace-expansion@>=4.0.0 <5.0.9: ~5.0.9
