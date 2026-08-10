@@ -37,8 +37,8 @@ importers:
         specifier: 1.13.0
         version: 1.13.0
       devextreme-themebuilder:
-        specifier: 25.2.3
-        version: 25.2.3(bootstrap@5.3.8(@popperjs/core@2.11.8))
+        specifier: 25.2.9
+        version: 25.2.9(bootstrap@5.3.8(@popperjs/core@2.11.8))
       esbuild:
         specifier: ^0.28.1
         version: 0.28.1
@@ -835,9 +835,6 @@ packages:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
     engines: {node: '>=18'}
 
-  caniuse-lite@1.0.30001788:
-    resolution: {integrity: sha512-6q8HFp+lOQtcf7wBK+uEenxymVWkGKkjFpCvw5W25cmMwEDU45p1xQFBQv8JDlMMry7eNxyBaR+qxgmTUZkIRQ==}
-
   caniuse-lite@1.0.30001806:
     resolution: {integrity: sha512-72Cuvd95zbSYPKq6Fhg8eDJRlzgWDf7/mtoZv6Qe/DYNCEBdNxoA3+rZAU2ZhGCpZlns3EssFavaZomckT5Uuw==}
 
@@ -918,8 +915,8 @@ packages:
   devextreme-quill@1.7.7:
     resolution: {integrity: sha512-tRAdHOxGGTb5TSX2o4v7nTsXe567tdyipbehF28h2OH6pJNNLzCjWw5JAd2UHMbh6VG0bg+3xshsn9DJwX4P0Q==}
 
-  devextreme-themebuilder@25.2.3:
-    resolution: {integrity: sha512-7anhgvZ8NMS8QtTIavXT19aq92n5qm7mAFvNH25bzoqybB+cydQr+z+xQkoTNeprdZuC5c/CBfZJppi12IuXWA==}
+  devextreme-themebuilder@25.2.9:
+    resolution: {integrity: sha512-/tXQ5eHMYKVw/Xyl5nN1KBRNe9Erxyaia6dmGpeNu2IcdIGeHHb+jwxgGqfqplHcrqPRf5bR2phfSJxlmpL5mg==}
     peerDependencies:
       bootstrap: ^5.3.8
 
@@ -2563,7 +2560,7 @@ snapshots:
   autoprefixer@10.5.0(postcss@8.5.23):
     dependencies:
       browserslist: 4.28.2
-      caniuse-lite: 1.0.30001788
+      caniuse-lite: 1.0.30001806
       fraction.js: 5.3.4
       picocolors: 1.1.1
       postcss: 8.5.23
@@ -2600,8 +2597,6 @@ snapshots:
   bundle-name@4.1.0:
     dependencies:
       run-applescript: 7.1.0
-
-  caniuse-lite@1.0.30001788: {}
 
   caniuse-lite@1.0.30001806: {}
 
@@ -2683,7 +2678,7 @@ snapshots:
       parchment: 2.0.1
       quill-delta: 5.1.0
 
-  devextreme-themebuilder@25.2.3(bootstrap@5.3.8(@popperjs/core@2.11.8)):
+  devextreme-themebuilder@25.2.9(bootstrap@5.3.8(@popperjs/core@2.11.8)):
     dependencies:
       autoprefixer: 10.5.0(postcss@8.5.23)
       bootstrap: 5.3.8(@popperjs/core@2.11.8)

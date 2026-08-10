@@ -23,7 +23,7 @@
     "@eslint/js": "^10.0.1",
     "@vitejs/plugin-vue": "^6.0.6",
     "devextreme-cli": "1.13.0",
-    "devextreme-themebuilder": "25.2.3",
+    "devextreme-themebuilder": "25.2.9",
     "esbuild": "^0.28.1",
     "eslint": "^10.8.0",
     "eslint-plugin-vue": "~10.10.0",
