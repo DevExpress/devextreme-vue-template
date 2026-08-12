@@ -13,8 +13,8 @@
     "postinstall": "pnpm run build-themes"
   },
   "dependencies": {
-    "devextreme": "25.2.3",
-    "devextreme-vue": "25.2.3",
+    "devextreme": "26.1.4",
+    "devextreme-vue": "26.1.4",
     "sass-embedded": "^1.99.0",
     "vue": "^3.5.32",
     "vue-router": "^4.6.4"
@@ -22,8 +22,8 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@vitejs/plugin-vue": "^6.0.6",
-    "devextreme-cli": "1.13.0",
-    "devextreme-themebuilder": "25.2.3",
+    "devextreme-cli": "1.17.0",
+    "devextreme-themebuilder": "26.1.4",
     "esbuild": "^0.28.1",
     "eslint": "^10.8.0",
     "eslint-plugin-vue": "~10.10.0",
