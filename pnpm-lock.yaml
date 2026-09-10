@@ -33,7 +33,7 @@ importers:
         version: 10.0.1(eslint@10.8.0)
       '@vitejs/plugin-vue':
         specifier: ^6.0.6
-        version: 6.0.6(vite@8.0.16(esbuild@0.28.1)(less@4.8.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.5.32)
+        version: 6.0.8(vite@8.0.16(esbuild@0.28.1)(less@4.8.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.5.32)
       devextreme-cli:
         specifier: 1.17.0
         version: 1.17.0
@@ -688,9 +688,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rolldown/pluginutils@1.0.0-rc.13':
-    resolution: {integrity: sha512-3ngTAv6F/Py35BsYbeeLeecvhMKdsKm4AoOETVhAA+Qc8nrA2I0kF7oa93mE9qnIurngOSpMnQ0x2nQY2FPviA==}
-
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
 
@@ -706,8 +703,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@vitejs/plugin-vue@6.0.6':
-    resolution: {integrity: sha512-u9HHgfrq3AjXlysn0eINFnWQOJQLO9WN6VprZ8FXl7A2bYisv3Hui9Ij+7QZ41F/WYWarHjwBbXtD7dKg3uxbg==}
+  '@vitejs/plugin-vue@6.0.8':
+    resolution: {integrity: sha512-0ZjgOg7oO6farnNGup7yvoM/YXZV84OZxHAwtflItNa/6zzQyVb5LNxyea3FEKEX2XlagIKzrlH7wwxkKgtiew==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2589,8 +2586,6 @@ snapshots:
   '@rolldown/binding-win32-x64-msvc@1.0.3':
     optional: true
 
-  '@rolldown/pluginutils@1.0.0-rc.13': {}
-
   '@rolldown/pluginutils@1.0.1': {}
 
   '@tybys/wasm-util@0.10.3':
@@ -2604,9 +2599,9 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@vitejs/plugin-vue@6.0.6(vite@8.0.16(esbuild@0.28.1)(less@4.8.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.5.32)':
+  '@vitejs/plugin-vue@6.0.8(vite@8.0.16(esbuild@0.28.1)(less@4.8.1)(sass-embedded@1.99.0)(sass@1.99.0))(vue@3.5.32)':
     dependencies:
-      '@rolldown/pluginutils': 1.0.0-rc.13
+      '@rolldown/pluginutils': 1.0.1
       vite: 8.0.16(esbuild@0.28.1)(less@4.8.1)(sass-embedded@1.99.0)(sass@1.99.0)
       vue: 3.5.32
 
