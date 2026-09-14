@@ -33,7 +33,7 @@ jobs:
         pnpm exec vite build --base "/devextreme-vue-template/"
     
     - name: Disable Jekyll processing
-      run: touch devextreme-vue-template/.nojekyll
+      run: touch .nojekyll
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6
