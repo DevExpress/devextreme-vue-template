@@ -13,8 +13,8 @@
     "postinstall": "pnpm run build-themes"
   },
   "dependencies": {
-    "devextreme": "26.1.4",
-    "devextreme-vue": "26.1.4",
+    "devextreme": "26.1.6",
+    "devextreme-vue": "26.1.6",
     "sass-embedded": "^1.99.0",
     "vue": "^3.5.43",
     "vue-router": "^4.6.4"
